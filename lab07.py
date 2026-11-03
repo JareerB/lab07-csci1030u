@@ -41,19 +41,20 @@ def is_sorted(values):
 class Rectangle:
     def __init__(self, width, height):
         # TODO (Part 3, OOP): store width and height on self
-        pass
+        self.width = width
+        self.height = height
 
     def area(self):
         # TODO: return width * height
-        pass
+        return self.width * self.height
 
     def perimeter(self):
         # TODO: return 2 * (width + height)
-        pass
+        return 2 * (self.width + self.height)
 
     def __str__(self):
         # TODO: return "<width>x<height>", e.g. Rectangle(3, 4) -> "3x4"
-        pass
+        return f"{self.width}x{self.height}"
 
 
 class Square(Rectangle):   # Part 4 - stretch (optional)
