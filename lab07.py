@@ -27,7 +27,15 @@ def is_sorted(values):
     #   (every item is <= the one after it), otherwise False.
     #   Base case: a list of 0 or 1 items is already sorted.
     #   Recursive case: the first two items are in order AND the rest is sorted.
-    pass
+    if len(values) <= 1:
+        return True
+
+    if values[0] <= values[1]:
+        return is_sorted(values[1:])
+
+    else:
+        return False
+
 
 
 class Rectangle:
